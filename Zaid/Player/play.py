@@ -157,21 +157,21 @@ async def play(c: Client, m: Message):
     a = await c.get_chat_member(chat_id, aing.id)
     if a.status != "administrator":
         await m.reply_text(
-            f"💡 To use me, I need to be an **Administrator** with the following **permissions**:\n\n» ❌ __Delete messages__\n» ❌ __Add users__\n» ❌ __Manage video chat__\n\nData is **updated** automatically after you **promote me**"
+            f"❤️‍🔥 لاستخدام البوت, ارفعني كمشرف اولا **في مجموعتك** بعد ذالك اعطني الصلاحيات **التالية**:\n\n» 🤼 __حذف رسائل__\n» 🤼 __اضافة مستخدمين__\n» 🤼 __ادارة دردشة الفيديو__\n\nسيتم تحديث **البيانات تلقائيا**"
         )
         return
     if not a.can_manage_voice_chats:
         await m.reply_text(
-            "missing required permission:" + "\n\n» ❌ __Manage video chat__"
+            "شلون اشغل واني معندي صلاحية :" + "\n\n» ❤️‍🔥 __دردشة الفيديو__"
         )
         return
     if not a.can_delete_messages:
         await m.reply_text(
-            "missing required permission:" + "\n\n» ❌ __Delete messages__"
+            "شلون اشغل واني معندي صلاحية:" + "\n\n» ❤️‍🔥 __حذف رسائل__"
         )
         return
     if not a.can_invite_users:
-        await m.reply_text("missing required permission:" + "\n\n» ❌ __Add users__")
+        await m.reply_text("شلون اشغل واني معندي صلاحية:" + "\n\n» ❤️‍🔥 __اضافة مستخدمين__")
         return
     try:
         ubot = (await user.get_me()).id
@@ -186,7 +186,7 @@ async def play(c: Client, m: Message):
             try:
                 await user.join_chat(m.chat.username)
             except Exception as e:
-                await m.reply_text(f"❌ **userbot failed to join**\n\n**reason**: `{e}`")
+                await m.reply_text(f"❤️‍🔥 **فشل حساب المساعد في الانضمام**\n\n**السبب**: `{e}`")
                 return
         else:
             try:
