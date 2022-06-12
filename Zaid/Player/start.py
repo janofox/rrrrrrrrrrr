@@ -8,72 +8,46 @@ from config import START_PIC, UPDATES_CHANNEL, GROUP_SUPPORT
 
 
 ALIVE_PIC = START_PIC
-HOME_TEXT = "👋🏻 **Hi Sir [{}](tg://user?id={})** \n\n🤖 Im **Zaid Vc Player**. \n**I Can Stream Lives, Radios, Raid, Vc Raid, YouTube Videos & Telegram Video Files On Voice Chat Of Telegram Groups**"
+HOME_TEXT = "🤼 **لك يعمري ههلو [{}](tg://user?id={})** \n\n❤️‍🔥 انا روبوت **لتشغيل الاغاني**. \n**لتشغيل الاغاني في المحموعات يمكنك معرفة استخدامي عن طريق زر الاوامر**"
 HELP_TEXT = """
-🏷️ **Setup Guide** :
+🏷️ **لوحة التحكم** :
 
-\u2022 Start a voice chat in your group.
-\u2022 Add bot and user account in chat with admin rights.
-\u2022 Done Setup Process Read Commands Below 👇.
+\u2022 يمكنك معرفة جميع الاوامر عن طريق الازرار الادناه.
 """
-
 
 
 USER_TEXT = """
-🏷️ **Users Commands** :
+🏷️ **هذا قائمة الاوامر** :
 
-\u2022 /play <Query> To Play a Song.
-\u2022 /vplay <Query> To Play Video.
-\u2022 /stream <Live Url> To Play Live Streams 👇\n /song To Download A Audio file from YouTube. \n /video to download Video From YouTube\n /lyric to find Lyrics.
+\u2022 - تابع الاوامر في الاسفل ↓
+
+\u2022 -› .شغل - بالرد على ملف صوتي او اسم أغنية
+\u2022 -› .اصعد - لصعود حساب المساعد في المكالمة
+\u2022 -› .انزل - لنزول المساعد من المكالمة
+\u2022 -› .تخطي - لتخطي اغنية في التشغيل
+\u2022 -› .كافي - لايقاف تشغيل جميع الاغاني
+\u2022 -› .اضبط - لضبط صوت حساب المساعد
+\u2022 -› .فيديو - بالرد على مقطع فيديو او اسم فيديو
+\u2022 -› .الانتضار - لرؤية قائمة الانتضار التشغيل
+\u2022 -› .ابحثلي - لبحث عن فيديو من اليوتيوب
+\u2022 -› .بحث - لتحميل اغنية من اليوتيوب
+\u2022 -› .كتم - لكتم صوت المساعد 
+\u2022 -› .بنك - لإضهار بنك البوت
+\u2022 -› .انضم - لدعوة حساب المساعد
+
+. شكراً لقرائتك الاوامر - أتمنى لك يوماً تعيساً 🦴
 """
 
-SPAM_TEXT = """
-🏷️ **Spam Help @adminsOnly** :
-
-\u2022 /spam <Count> Text To Spam Your Message.
-\u2022 /fspam <Count> Text for spamming.
-\u2022 /delayspam <Count> Text for Spamming.
-"""
-
-RAID_TEXT = """
-🏷️ **Raid Commands @SudoOnly** :
-
-\u2022 /vcraid <chatid> - Give a Chat Id Else Username To Voice Raid.
-\u2022 /vraid <chatid + Reply To Video File> - To Raid Video.
-\u2022 /raidpause - To Pause Raid.
-\u2022 /raidresume To Resume Raid.
-\u2022 /raidend <chatid> To End Audio/Video Raid.
-"""
-
-ADMIN = """
-🏷️ **admin Commands** :
-
-\u2022 /userbotjoin To Invite Assistant To Your Chat.
-\u2022 /end To End Streaming.
-\u2022 /pause To Pause Stream.
-\u2022 /resume To Resume Stream.
-\u2022 /volume To Set Volume.
-\u2022 /skip To Skip Tracks.
-"""
 
 @Client.on_callback_query()
 async def cb_handler(client: Client, query: CallbackQuery):
     if query.data=="help":
         buttons = [
-            [
-                InlineKeyboardButton("👮 Aᴅᴍɪɴꜱ", url="https://telegra.ph/𝗕ooo--‌ᴀꜰᴋ-ᴏꜰꜰʟɪɴᴇ-05-17-2"),
-                InlineKeyboardButton("🗨️ Uꜱᴇʀꜱ", callback_data="users"),
+            [                
+                InlineKeyboardButton("🤼 الاومر", callback_data="users"),          
             ],
             [
-                InlineKeyboardButton("🤬 Rᴀɪᴅ", callback_data="raid"),
-                InlineKeyboardButton("🗨️ Sᴘᴀᴍ", callback_data="spam"),
-            ],
-            [
-                InlineKeyboardButton("🤖 Cʟᴏɴᴇʀ", url="t.me/ZaidClonerBot"),
-            ],
-            [
-                InlineKeyboardButton("🔙 Bᴀᴄᴋ", callback_data="home"),
-                InlineKeyboardButton("🤷 Cʟᴏꜱᴇ", callback_data="close"),
+                InlineKeyboardButton("🔙 رجوع", callback_data="home"),               
             ]
             ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -115,8 +89,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data=="users":
         buttons = [
             [
-                InlineKeyboardButton("🔙 Bᴀᴄᴋ", callback_data="help"),
-                InlineKeyboardButton("🤷 Cʟᴏꜱᴇ", callback_data="close"),
+                InlineKeyboardButton("🔙 الاوامر", callback_data="help"),
+                InlineKeyboardButton("🤷 رجوع", callback_data="close"),
             ]
             ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -187,42 +161,17 @@ async def start(client: Client, message: Message):
     USERNAME = get_me.username
     buttons = [
             [
-                InlineKeyboardButton("🧐 Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Cʜᴀᴛ", url=f'https://t.me/{USERNAME}?startgroup=true'),
+                InlineKeyboardButton("➕ اضفني الى مجموعتك ➕", url=f'https://t.me/{USERNAME}?startgroup=true'),
             ],
-            [
-                InlineKeyboardButton("💌 Sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{GROUP_SUPPORT}"),
-                InlineKeyboardButton("🏷️ Oꜰꜰɪᴄɪᴀʟ Cʜᴀɴɴᴇʟ", url=f"https://t.me/{UPDATES_CHANNEL}"),
+            [               
+                InlineKeyboardButton("قناة المطور", url=f"https://t.me/{UPDATES_CHANNEL}"),
+                InlineKeyboardButton("🏷️ المطور", url=f"https://t.me/{OWNER_USERNAME}"),
             ],
+            
             [
-                InlineKeyboardButton("🤖 Sᴏᴜʀᴄᴇ Cᴏᴅᴇ", url="https://github.com/Itz-Zaid/Zaid-Vc-Player"),
-            ],
-            [
-                InlineKeyboardButton("🤔 Hᴇʟᴘ & Cᴏᴍᴍᴀɴᴅꜱ", callback_data="help"),
+                InlineKeyboardButton("🤼 الاوامر", callback_data="help"),
             ]
             ]
     reply_markup = InlineKeyboardMarkup(buttons)
     await message.reply_photo(photo=f"{ALIVE_PIC}", caption=HOME_TEXT.format(message.from_user.first_name, message.from_user.id), reply_markup=reply_markup)
 
-@Client.on_message(filters.command(["help"]) & filters.private)
-async def help(client: Client, message: Message):
-    get_me = await client.get_me()
-    self.username = get_me.username
-    buttons = [
-            [
-                InlineKeyboardButton("👮 Aᴅᴍɪɴꜱ", url="https://telegra.ph/𝗕ooo--‌ᴀꜰᴋ-ᴏꜰꜰʟɪɴᴇ-05-17-2"),
-                InlineKeyboardButton("🗨️ Uꜱᴇʀꜱ", callback_data="users"),
-            ],
-            [
-                InlineKeyboardButton("🤬 Rᴀɪᴅ", callback_data="raid"),
-                InlineKeyboardButton("🗨️ Sᴘᴀᴍ", callback_data="spam"),
-            ],
-            [
-                InlineKeyboardButton("🤖 Cʟᴏɴᴇʀ", url="t.me/ZaidClonerBot"),
-            ],
-            [
-                InlineKeyboardButton("🔙 Bᴀᴄᴋ", callback_data="home"),
-                InlineKeyboardButton("🤷 Cʟᴏꜱᴇ", callback_data="close"),
-            ]
-            ]
-    reply_markup = InlineKeyboardMarkup(buttons)
-    await message.reply_photo(photo=f"{ALIVE_PIC}", caption=f"{HELP_TEXT}", reply_markup=reply_markup)
