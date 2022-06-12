@@ -23,8 +23,8 @@ from pytgcalls.types.stream import StreamAudioEnded, StreamVideoEnded
 keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton(text="• Mᴇɴᴜ", callback_data="cbmenu"),
-                InlineKeyboardButton(text="• Cʟᴏsᴇ", callback_data="cls"),
+                InlineKeyboardButton(text="• تحكم", callback_data="cbmenu"),
+                InlineKeyboardButton(text="• مسح", callback_data="cls"),
             ]
         ]
     )
@@ -111,11 +111,11 @@ async def stream_end_handler(_, u: Update):
         print(chat_id)
         op = await skip_current_song(chat_id)
         if op==1:
-           await bot.send_message(chat_id, "✅ **userbot has disconnected from video chat.**")
+           await bot.send_message(chat_id, "✅ **انقطع صوت حساب المساعد من الدردشة.**")
         elif op==2:
            await bot.send_message(chat_id, "❌ **an error occurred**\n\n» **Clearing** __Queues__ **and leaving video chat.**")
         else:
-         await bot.send_message(chat_id, f"💡 **Streaming next track**\n\n🏷 **Name:** [{op[0]}]({op[1]}) | `{op[2]}`\n💭 **Chat:** `{chat_id}`", disable_web_page_preview=True, reply_markup=keyboard)
+         await bot.send_message(chat_id, f"💡 **تخطي الاغنية**\n\n🏷 **الاسم:** [{op[0]}]({op[1]}) | `{op[2]}`\n💭 **الدردشة:** `{chat_id}`", disable_web_page_preview=True, reply_markup=keyboard)
     else:
        pass
 
