@@ -9,7 +9,7 @@ from pyrogram.errors import UserAlreadyParticipant
 
 
 @Client.on_message(
-    command(["userbotjoin", f"userbotjoin@{BOT_USERNAME}"]) & ~filters.private & ~filters.bot
+    command(["انضم", f"userbotjoin@{BOT_USERNAME}"]) & ~filters.private & ~filters.bot
 )
 @authorized_users_only
 @errors
@@ -40,7 +40,7 @@ async def join_group(client, message):
         )
         return
     await message.reply_text(
-        f"✅ **userbot succesfully entered chat**",
+        f"✅ **تم الانضمام**",
     )
 
 
