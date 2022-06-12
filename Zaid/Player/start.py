@@ -165,7 +165,7 @@ async def start(client: Client, message: Message):
             ],
             [               
                 InlineKeyboardButton("قناة المطور", url=f"https://t.me/{UPDATES_CHANNEL}"),
-                InlineKeyboardButton("🏷️ المطور", url=f"https://t.me/{OWNER_USERNAME}"),
+                InlineKeyboardButton("🏷️ المطور", url=f"https://t.me/{UPDATES_CHANNEL}"),
             ],
             
             [
