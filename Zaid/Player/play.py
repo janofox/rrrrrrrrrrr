@@ -138,10 +138,10 @@ async def play(c: Client, m: Message):
     chat_id = m.chat.id
     keyboard = InlineKeyboardMarkup(
                   [[
-                      InlineKeyboardButton(". أيقاف", callback_data="cbstop"),
-                      InlineKeyboardButton(". أيقاف مؤقت", callback_data="cbpause"),
-                      InlineKeyboardButton(". تخطي", "skip"),
-                      InlineKeyboardButton(". استمرار", callback_data="cbresume"),
+                      InlineKeyboardButton("⏹️", callback_data="cbstop"),
+                      InlineKeyboardButton("⏸️", callback_data="cbpause"),
+                      InlineKeyboardButton("⏭️", "skip"),
+                      InlineKeyboardButton("🔼", callback_data="cbresume"),
                   ],[
                       InlineKeyboardButton(text="🥇 المطور ", url=f"https://t.me/{UPDATES_CHANNEL}"),
                   ],[
