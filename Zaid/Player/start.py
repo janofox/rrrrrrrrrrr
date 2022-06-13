@@ -7,6 +7,7 @@ from Zaid.main import Test, bot as Client
 from config import UPDATES_CHANNEL, GROUP_SUPPORT
 
 
+ALIVE_PIC = START_PIC
 HOME_TEXT = "❤️‍🔥 ** ههݪاެ حبيب [{}](tg://user?id={})** \n\n❤️‍🔥 \n**اެناެ بَۅت بَمميࢪ࣪اެتَ متَعدَدةَ ݪتشغِيݪ اެݪاغاެنِي فَي اެݪمَجمَۅعاتَ 🥇.** \n**اެضغط عݪى ࢪ࣪ࢪ الاۅاެمࢪ لݪاستخداެم 🤍.**"
 HELP_TEXT = """
 🐕‍🦺 **- تابع الازرار في الاسفل ↓** :
@@ -168,3 +169,6 @@ async def start(client: Client, message: Message):
             ]
             ]
     reply_markup = InlineKeyboardMarkup(buttons)
+    await message.reply_photo(photo=f"{ALIVE_PIC}", caption=f"{HELP_TEXT}", reply_markup=reply_markup)
+
+
