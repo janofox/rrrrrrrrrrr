@@ -4,7 +4,7 @@ from pyrogram.types import Message
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 from pyrogram.errors import MessageNotModified
 from Zaid.main import Test, bot as Client
-from config import START_PIC, UPDATES_CHANNEL, GROUP_SUPPORT
+from config import UPDATES_CHANNEL, GROUP_SUPPORT
 
 
 HOME_TEXT = "❤️‍🔥 ** ههݪاެ حبيب [{}](tg://user?id={})** \n\n❤️‍🔥 \n**اެناެ بَۅت بَمميࢪ࣪اެتَ متَعدَدةَ ݪتشغِيݪ اެݪاغاެنِي فَي اެݪمَجمَۅعاتَ 🥇.** \n**اެضغط عݪى ࢪ࣪ࢪ الاۅاެمࢪ لݪاستخداެم 🤍.**"
@@ -168,5 +168,3 @@ async def start(client: Client, message: Message):
             ]
             ]
     reply_markup = InlineKeyboardMarkup(buttons)
-    await message.reply_photo(photo=f"{ALIVE_PIC}", caption=HOME_TEXT.format(message.from_user.first_name, message.from_user.id), reply_markup=reply_markup)
-
