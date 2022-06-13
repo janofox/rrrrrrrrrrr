@@ -9,15 +9,15 @@ if os.path.exists("local.env"):
 
 load_dotenv()
 admins = {}
-SESSION_NAME = getenv("SESSION_NAME", "")
-BOT_TOKEN = getenv("BOT_TOKEN", "")
+SESSION_NAME = getenv("SESSION_NAME", "BQBxC9454JYmFNI9OkUMt_ricqDT2Y3bWJW8jLdKhmPTQMUQ58pwynBuVYYnBnFIvZpTmRuIanpIRpMlUg7iKZ12st4evmSCscBDaS4ZHMULUdwEBWDTVQomp6Umolcq9LdKocinby7DtvT9p-mKLiQrehdgjNXkjDWG1Zc--gQV8bzL5VUIxrMEArIMS4wKmmojkk1DzxXtrKzckyNFVUYlWqW6aLESxnFigsS02dWX1CbCmuTeTxx0VNdGuG5FPr0C3QYCev4LUy-XyLOv4RHAyuk2JffG-Gni7Mv0ye945Td3wEUBmAS00KWr-pKcAIJbL9yG9hzih7ORN3GeeEWXAAAAAS2neqoA")
+BOT_TOKEN = getenv("BOT_TOKEN", "5548068792:AAFQbB6XCZmFWrTBkC-45FL8othePtJeLC8")
 BOT_NAME = getenv("BOT_NAME", "Umk")
 API_ID = int(getenv("API_ID", "8186557"))
 API_HASH = getenv("API_HASH", "efd77b34c69c164ce158037ff5a0d117")
 OWNER_NAME = getenv("OWNER_NAME", "muntazer")
 OWNER_USERNAME = getenv("OWNER_USERNAME", "rr8r9")
 ALIVE_NAME = getenv("ALIVE_NAME", "muntazer")
-BOT_USERNAME = getenv("BOT_USERNAME", "Playvideo1BoT")
+BOT_USERNAME = getenv("BOT_USERNAME", "sfsfoabot")
 OWNER_ID = getenv("OWNER_ID", "1854384004")
 ASSISTANT_NAME = getenv("ASSISTANT_NAME", "Playvideo1")
 GROUP_SUPPORT = getenv("GROUP_SUPPORT", "xl444")
