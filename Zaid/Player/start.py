@@ -8,15 +8,16 @@ from config import START_PIC, UPDATES_CHANNEL, GROUP_SUPPORT
 
 
 ALIVE_PIC = START_PIC
-HOME_TEXT = "❤️‍🔥 ** ههݪاެ حبيب [{}](tg://user?id={})** \n**اެناެ بَۅت بَمميࢪ࣪اެتَ متَعدَدةَ ݪتشغِيݪ اެݪاغاެنِي فَي اެݪمَجمَۅعاتَ 🥇.** \n **اެضغط عݪى ࢪ࣪ࢪ الاۅاެمࢪ لݪاستخداެم 🤍.**"
+HOME_TEXT = "🐕‍🦺 **ههݪاެ حبيب [{}](tg://user?id={})** \n اެناެ بَۅت بَمميࢪ࣪اެتَ متَعدَدةَ ݪتشغِيݪ اެݪاغاެنِي فَي اެݪمَجمَۅعاتَ 🥇. \n** اެضغط عݪى ࢪ࣪ࢪ الاۅاެمࢪ لݪاستخداެم 🤍.**"
 HELP_TEXT = """
-🐕‍🦺 **- تابع الازرار في الاسفل ↓**
-
-\u2022 يمديك تشوف كل اوامر البوت عن طريق زر اوامر البوت
+🐕‍🦺 **- تابع الازرار في الاسفل ↓** :
+\u2022 يمديك تشوف كل اوامر البوت عن طريق زر اوامر البوت.
 """
 
+
+
 USER_TEXT = """
-🐕‍🦺 **- تابع الاوامر في الاسفل ** :
+🐕‍🦺 **- تابع الاوامر في الاسفل ↓** :
 
 \u2022 -› .شغل - بالرد على ملف صوتي او اسم أغنية
 \u2022 -› .اصعد - لصعود حساب المساعد في المكالمة
@@ -32,7 +33,7 @@ USER_TEXT = """
 \u2022 -› .بنك - لإضهار بنك البوت
 \u2022 -› .انضم - لدعوة حساب المساعد
 
-. شكراً لقرائتك الاوامر - أتمنى لك يوماً تعيساً 🦴
+. شكراً لقرائتك الاوامر - أتمنى لك يوماً تعيساً 🦴.
 """
 
 
@@ -85,7 +86,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [
             [
                 InlineKeyboardButton("- اوامر البوت", callback_data="help"),
-                InlineKeyboardButton("- رجوع", callback_data="close"),
+                InlineKeyboardButton("- مسح", callback_data="close"),
             ]
             ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -101,7 +102,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [
             [
                 InlineKeyboardButton("- اوامر البوت", callback_data="help"),
-                InlineKeyboardButton("- رجوع", callback_data="close"),
+                InlineKeyboardButton("- مسح", callback_data="close"),
             ]
             ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -114,7 +115,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [
             [
                 InlineKeyboardButton("- اوامر البوت", callback_data="help"),
-                InlineKeyboardButton("- رجوع", callback_data="close"),
+                InlineKeyboardButton("- مسح", callback_data="close"),
             ]
             ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -130,7 +131,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         buttons = [
             [
                 InlineKeyboardButton("- اوامر البوت", callback_data="help"),
-                InlineKeyboardButton("- رجوع", callback_data="close"),
+                InlineKeyboardButton("- مسح", callback_data="close"),
             ]
             ]
         reply_markup = InlineKeyboardMarkup(buttons)
