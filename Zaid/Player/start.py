@@ -50,7 +50,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     if query.data=="help":
         buttons = [
             [
-                InlineKeyboardButton("اެݪمِطَۅࢪ", url=f"https://t.me/{UPDATES_CHANNEL}""),
+                InlineKeyboardButton("اެݪمِطَۅࢪ", url=f"https://t.me/{UPDATES_CHANNEL}"),
                 InlineKeyboardButton("اެݪاۅاެمࢪ", callback_data="users"),
             ],
             [
