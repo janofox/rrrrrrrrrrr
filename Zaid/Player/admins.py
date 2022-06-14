@@ -104,7 +104,7 @@ async def stop(client, m: Message):
         except Exception as e:
             await m.reply(f"🚫 **error:**\n\n`{e}`")
     else:
-        await m.reply("❌ **nothing is streaming**")
+        await m.reply("معݪش ، ماެفي شي مشتغݪ ياެعيني🌵.")
 
 
 @Client.on_message(
@@ -176,7 +176,7 @@ async def unmute(client, m: Message):
         except Exception as e:
             await m.reply(f"🚫 **error:**\n\n`{e}`")
     else:
-        await m.reply("❌ **ماكو شي مشتغل دعبل**")
+        await m.reply("🐕‍🦺 **معݪش ، ماެفي شي مشتغݪ ياެعيني🌵.**")
 
 
 @Client.on_callback_query(filters.regex("cbpause"))
@@ -196,7 +196,7 @@ async def cbpause(_, query: CallbackQuery):
         except Exception as e:
             await query.edit_message_text(f"🚫 **error:**\n\n`{e}`", reply_markup=bcl)
     else:
-        await query.answer("❌ ماكو شي مشتغل", show_alert=True)
+        await query.answer("معݪش ، ماެفي شي مشتغݪ ياެعيني🌵.", show_alert=True)
 
 
 @Client.on_callback_query(filters.regex("cbresume"))
@@ -216,7 +216,7 @@ async def cbresume(_, query: CallbackQuery):
         except Exception as e:
             await query.edit_message_text(f"🚫 **error:**\n\n`{e}`", reply_markup=bcl)
     else:
-        await query.answer("❌ ماكو شي مشتغل دعبل", show_alert=True)
+        await query.answer("معݪش ، ماެفي شي مشتغݪ ياެعيني🌵.", show_alert=True)
 
 
 @Client.on_callback_query(filters.regex("cbstop"))
@@ -235,7 +235,7 @@ async def cbstop(_, query: CallbackQuery):
         except Exception as e:
             await query.edit_message_text(f"🚫 **error:**\n\n`{e}`", reply_markup=bcl)
     else:
-        await query.answer("❌ ماكو شي مشتغل", show_alert=True)
+        await query.answer("معݪش ، ماެفي شي مشتغݪ ياެعيني🌵.", show_alert=True)
 
 
 @Client.on_callback_query(filters.regex("cbmute"))
@@ -255,7 +255,7 @@ async def cbmute(_, query: CallbackQuery):
         except Exception as e:
             await query.edit_message_text(f"🚫 **error:**\n\n`{e}`", reply_markup=bcl)
     else:
-        await query.answer("❌ تم كتم صوت userbot بنجاح", show_alert=True)
+        await query.answer(" تم كتم صوت المساعد بنجاح", show_alert=True)
 
 
 @Client.on_callback_query(filters.regex("cbunmute"))
@@ -270,12 +270,12 @@ async def cbunmute(_, query: CallbackQuery):
         try:
             await call_py.unmute_stream(chat_id)
             await query.edit_message_text(
-                "🔊 تم إلغاء كتم صوت userbot بنجاح", reply_markup=bttn
+                "🔊 تم إلغاء كتم صوت المساعد بنجاح", reply_markup=bttn
             )
         except Exception as e:
             await query.edit_message_text(f"🚫 **error:**\n\n`{e}`", reply_markup=bcl)
     else:
-        await query.answer("❌ nothing is currently streaming", show_alert=True)
+        await query.answer("معݪش ، ماެفي شي مشتغݪ ياެعيني🌵.", show_alert=True)
 
 
 @Client.on_message(
@@ -294,4 +294,4 @@ async def change_volume(client, m: Message):
         except Exception as e:
             await m.reply(f"🚫 **error:**\n\n`{e}`")
     else:
-        await m.reply("❌ **ماكو شي مشتغل **")
+        await m.reply("🐕‍🦺 **معݪش ، ماެفي شي مشتغݪ ياެعيني🌵. **")
