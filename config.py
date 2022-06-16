@@ -9,13 +9,13 @@ if os.path.exists("local.env"):
 
 load_dotenv()
 admins = {}
-SESSION_NAME = getenv("SESSION_NAME", "AQBgKNnFnEyLDAS8GFnUNOCeJ-vaon4ljCtEezF4fB9eOOARmTlR2WRjUrAz9b9ZY0mzz--NxbaRHCHphr4bS3tWYublKP3HgBqxueqOZ9_Y8BIlAwjftvh6xjYEZnSzWuvKk2faXcc5_1r7ggLeXepjE2oVSgiOByu9llg9vNe9IUha5fk8xi6fzY8lxQvK33YA8njipD7iiROAX1zcxdh-YsonsxqtGHhbltNFJfW_zr6bbftQ-9E9o_wivEsl5zd9ZaQ1kTldvDCDcgnPoXYAgJIE0sQsP6ZnAjRLlxyOS7reBuTrGdqeAmapTm7tMh7thi4a8OFt4g0Ev7DbZDK8AAAAATBzenwA")
-BOT_TOKEN = getenv("BOT_TOKEN", "5544122497:AAHPE91_FFlOh6OjgvKOrKoTe8NWqXR1q-s")
+SESSION_NAME = getenv("SESSION_NAME", "")
+BOT_TOKEN = getenv("BOT_TOKEN", "")
 BOT_NAME = getenv("BOT_NAME", "song")
 API_ID = int(getenv("API_ID", "8186557"))
 API_HASH = getenv("API_HASH", "efd77b34c69c164ce158037ff5a0d117")
 OWNER_NAME = getenv("OWNER_NAME", "muntazer")
-OWNER_USERNAME = getenv("OWNER_USERNAME", "ls_1s")
+OWNER_USERNAME = getenv("OWNER_USERNAME", "rr8r9")
 ALIVE_NAME = getenv("ALIVE_NAME", "muntazer")
 BOT_USERNAME = getenv("BOT_USERNAME", "HS87YBOT")
 OWNER_ID = getenv("OWNER_ID", "1854384004")
