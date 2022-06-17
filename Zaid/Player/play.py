@@ -145,7 +145,7 @@ async def play(c: Client, m: Message):
                   ],[
                       InlineKeyboardButton(text="🥇 المطور ", url=f"https://t.me/{UPDATES_CHANNEL}"),
                   ],[
-                      InlineKeyboardButton("مسح.", callback_data="cls")],
+                      InlineKeyboardButton("مسح.", callback_data="close")],
                   ]
              )
     if m.sender_chat:
