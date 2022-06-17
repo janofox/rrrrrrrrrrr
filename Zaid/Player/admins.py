@@ -275,7 +275,7 @@ async def cbunmute(_, query: CallbackQuery):
         except Exception as e:
             await query.edit_message_text(f"🚫 **error:**\n\n`{e}`", reply_markup=bcl)
     else:
-        await query.answer("معݪش ، ماެفي شي مشتغݪ ياެعيني🌵.", show_alert=True)
+        await query.answer("❌ **ماكو شي مشتغل دعبل**", show_alert=True)
 
 
 @Client.on_message(
